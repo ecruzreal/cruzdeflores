@@ -2,9 +2,11 @@ body{
     padding: 0;
     margin: 0;
     background-color: rgb(235, 193, 199);
+    overflow-x: hidden;
 }
 /*---------------------------------------HEADER---------------------------------------*/
-header{
+.full-hdr{
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +17,26 @@ header{
     background-color: rgb(249, 249, 202);
     box-shadow: 1px 3px 4px rgb(145, 145, 145);
     transition: 0.3s;
+}
+
+.collapse-hdr{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    background-color: rgb(249, 249, 202);
+    box-shadow: 1px 3px 4px rgb(145, 145, 145);
+    transition: 1s;
+}
+
+.collapse-hdr > .header-buttons> .h-btn > a{
+    font-size: 1.6rem;
+}
+
+.h-btn.small-b:hover .small-a{
+    font-size: 2rem;
 }
 
 .header-buttons{
