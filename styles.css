@@ -3,9 +3,10 @@ body{
     margin: 0;
     background-color: rgb(235, 193, 199);
 }
-
+/*---------------------------------------HEADER---------------------------------------*/
 header{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 360px;
@@ -15,4 +16,54 @@ header{
     box-shadow: 1px 3px 4px rgb(145, 145, 145);
     transition: 0.3s;
 }
+
+.header-buttons{
+    display: flex;
+    gap: 5rem;
+    margin-top: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.h-btn > a{
+    font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: black;
+    transition: .3s;
+}
+
+.flower-spin{
+    margin-bottom: 10px;
+    visibility: hidden;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+.h-btn{
+    display: flex;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+}
+
+.h-btn:hover .flower-spin{
+    visibility: visible;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.h-btn:hover a{
+    font-size: 2.5rem;
+}
+
+@keyframes rotate{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/*---------------------------------------------MAIN------------------------------------------*/
 
