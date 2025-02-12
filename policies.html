@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruz de Floress | Policies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="header">
+        <div class="full-hdr" id="full">
+            <img src="img/cruzdefloreslogo.png" class="header-logo" id="hdr-logo" alt="company logo" height="250px">
+            <div class="header-buttons" id="full-btns">
+                <button class="h-btn"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a href="index.html#about">About</a></button>
+                <button class="h-btn"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a href="index.html#my-work">Gallery</a></button>
+                <button class="h-btn"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a href="index.html#rvw">Reviews</a></button>
+                <button class="h-btn"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a href="index.html#contact">Order</a></button>
+                <button class="h-btn"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a href="">Policies</a></button>
+
+            </div>
+        </div>
+        <div class="collapse-hdr" id="collapse">
+            <img src="img/cruzdefloreslogo.png" height="125px" alt="">
+            <div class="header-buttons">
+                <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="index.html#about">About</a></button>
+                <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="index.html#my-work">Gallery</a></button>
+                <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="index.html#rvw">Reviews</a></button>
+                <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="index.html#contact">Order</a></button>
+                <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="">Policies</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="policy-wrapper">
+        <span class="reminders">Important Reminders</span>
+        <div class="reminder-wrapper">
+            <div class="reminder-content">
+                <p>If you're looking to place an order, I ask that you place it 2-3 days in advance of
+                    the date you need it by! <br>
+                    Please preorder your flowers 🤗! Same day orders incur a fee based on the size and type of flowers you'd like in the bouqet;
+                    feel free to ask about pricing!
+                </p>
+                <img src="img/vecteezy_wreath-floral-branch-in-hand-drawn-style_12028148.png" height="280px">
+            </div>
+            <div class="reminder-content">
+                <img src="img/vecteezy_wreath-floral-branch-in-hand-drawn-style_12028231.png" height="280px" alt="">
+                <p>
+                    All orders require a non-refundable deposit, and please note that all prices for bouquets vary! <br>
+                    There is a +15$ late fee if pick up is delayed for over 30 minutes. Please try to be punctual!
+                    Note that add ons, including hats, banners, jewels, carry an additional charge! <br>
+                    If you are reuqesting an order with an alcoholic beverage, I require a picture of a valid ID. I will <em>NOT </em>be selling to
+                    anyone under the age of 21! 
+                </p>
+            </div>
+            <div class="reminder-content">
+                <p>Thank you!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span>Cruz de Floress | Copyright © 2025. All Rights Reserved</span> <br>
+        <div class="references">
+            <a href="https://www.vecteezy.com/free-png/hand-drawn-flowers">Hand Drawn Flowers PNGs by Vecteezy</a>,
+            <a target="_blank" href="https://icons8.com/icon/13912/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>,
+            <a target="_blank" href="https://icons8.com/icon/Xy10Jcu1L2Su/instagram">Instagram</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>,
+            <a target="_blank" href="https://icons8.com/icon/37966/chat-bubble">Message</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
+    </footer>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
+                document.getElementById('full').style.height = '0'
+                document.getElementById('full-btns').style.display = 'none'
+                document.getElementById('collapse').style.display = 'flex'
+            } else {
+                document.getElementById('full').style.height = '360px'
+                document.getElementById('full-btns').style.display = 'flex'
+                document.getElementById('collapse').style.display = 'none'
+            }
+        }
+    </script>
+    
+</body>
+</html>

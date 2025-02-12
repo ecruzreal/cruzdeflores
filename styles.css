@@ -336,3 +336,49 @@ footer{
 .references {
     font-size: .8rem;
 }
+
+/*-----------------------------policies------------------------*/
+
+.policy-wrapper{
+    margin-top: 350px;
+}
+
+.reminders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    margin-top: 6rem;
+    font-size: 4rem;
+    text-shadow: rgb(255, 235, 155) 0 0 10px;
+    color: white;
+    background-image: url(img/roses-background.jpg);
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    box-shadow: 1px 1px 5px #555 inset;
+}
+
+.reminder-content{
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.reminder-content p{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 60vw;
+}
+
+.reminder-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
