@@ -15,7 +15,7 @@ body{
     height: 360px;
     width: 100%;
     position: fixed;
-    background-color: rgb(249, 249, 202);
+    background-color: rgb(255, 255, 255);
     box-shadow: 1px 3px 4px rgb(145, 145, 145);
     z-index: 1;
 }
@@ -27,7 +27,7 @@ body{
     top: 0;
     position: fixed;
     width: 100%;
-    background-color: rgb(249, 249, 202);
+    background-color: rgb(255, 255, 255);
     box-shadow: 1px 3px 4px rgb(145, 145, 145);
     transition: 1s;
     z-index: 1;
@@ -122,18 +122,19 @@ main{
     padding: 2rem;
     width: 50vw;
     border-radius: 15px;
+    position: relative;
 }
 
 #abt-flwr-top{
     position: absolute;
-    right: 17%;
-    top: 66%;
+    right: -11%;
+    top: -8%;
 }
 
 #abt-flwr-btm{
     position: absolute;
-    top: 135%;
-    left: 17%;
+    top: 80%;
+    left: -15%;
 }
 
 /*---------------------------gallery-----------------------------*/
@@ -205,4 +206,133 @@ main{
     top: 300%;
     transform: rotate(-15deg);
     z-index: 0;
+}
+/*----------------------------reviews--------------------------*/
+.rvw-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    margin-top: 3rem;
+    font-size: 4rem;
+    text-shadow: rgb(255, 235, 155) 0 0 10px;
+    color: white;
+    background-image: url(img/roses-background.jpg);
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    box-shadow: 1px 1px 5px #555 inset;
+}
+
+.reviews{
+    display: flex;
+    gap: 15rem;
+    margin-top: 5rem;
+}
+
+#rvw-1,
+#rvw-2,
+#rvw-3{
+    position: absolute;
+}
+
+.content{
+    width: 13rem;
+}
+
+#rvw-1{
+    left: 4%;
+    top: 400%;
+}
+
+.c1, .c3{
+    font-size: 1.5rem;
+}
+
+.c2{
+    font-size: 1.2rem;
+}
+
+.c1{
+    margin-top: 1rem;
+}
+
+.c3{
+    margin-left: 1rem;
+}
+
+#rvw-2{
+    left: 35%;
+    top: 400%;
+}
+
+#rvw-3{
+    left: 64%;
+    top: 400%;
+}
+/*----------------------------------contact-----------------------------*/
+
+.contact-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    margin-top: 6rem;
+    font-size: 4rem;
+    text-shadow: rgb(255, 235, 155) 0 0 10px;
+    color: white;
+    background-image: url(img/roses-background.jpg);
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    box-shadow: 1px 1px 5px #555 inset;
+}
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.contact-para{
+    width: 65vw;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contact-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.7rem;
+}
+
+.contact-buttons > .phone{
+    height: 2rem;
+}
+
+.contact-buttons img{
+    height: 4rem;
+}
+
+/*---------------------------Footer----------------------------*/
+
+footer{
+    height: 5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.references {
+    font-size: .8rem;
 }
