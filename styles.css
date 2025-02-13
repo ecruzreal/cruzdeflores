@@ -4,6 +4,12 @@ body{
     background-color: rgb(235, 193, 199);
     overflow-x: hidden;
     font-family: 'DM Serif Text', Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+html{
+    overflow-x: hidden;
+    width: 100%;;
 }
 /*---------------------------------------HEADER---------------------------------------*/
 .full-hdr{
@@ -31,6 +37,70 @@ body{
     box-shadow: 1px 3px 4px rgb(145, 145, 145);
     transition: 1s;
     z-index: 1;
+}
+
+.tablet-header{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 3px 4px rgb(145, 145, 145);
+    z-index: 1;
+}
+
+.mobile-header{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 95px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.top-mobile > a > img{
+    margin-bottom: 2.85rem;
+}
+
+#links{
+    width: 100%;
+    display: none;
+    position: fixed;
+    margin-top: 94px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    z-index: 2;
+    padding-bottom: 1rem;
+}
+
+.flat-logo{
+    margin-top: 1rem;
+}
+
+.tablet-buttons-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#links button{
+    border: none;
+    background-color: transparent;
+}
+
+#links a{
+    font-family: 'Indie Flower', Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: black;
 }
 
 .collapse-hdr > .header-buttons> .h-btn > a{
@@ -134,7 +204,7 @@ main{
 #abt-flwr-btm{
     position: absolute;
     top: 80%;
-    left: -15%;
+    left: -17%;
 }
 
 /*---------------------------gallery-----------------------------*/
@@ -144,6 +214,10 @@ main{
     margin-top: 3rem;
     gap: 6rem;
     grid-template-columns: 1fr 1fr;
+}
+
+.work-wrapper{
+    position: relative;
 }
 
 .item > img{
@@ -188,22 +262,22 @@ main{
 }
 
 #work-1{
-    left: 15%;
-    top: 190%;
+    left: -30%;
+    top: 1%;
     transform: rotate(-10deg);
     z-index: 0;
 }
 
 #work-2{
-    right: 15%;
-    top: 250%;
+    right: -30%;
+    top: 40%;
     transform: rotate(10deg);
     z-index: 0;
 }
 
 #work-3{
-    left: 15%;
-    top: 300%;
+    left: -30%;
+    top: 70%;
     transform: rotate(-15deg);
     z-index: 0;
 }
@@ -228,6 +302,8 @@ main{
     display: flex;
     gap: 15rem;
     margin-top: 5rem;
+    position: relative;
+    text-shadow: rgb(255, 255, 255) 0 0 10px;
 }
 
 #rvw-1,
@@ -241,8 +317,8 @@ main{
 }
 
 #rvw-1{
-    left: 4%;
-    top: 400%;
+    left: -10%;
+    top: -22%;
 }
 
 .c1, .c3{
@@ -262,13 +338,13 @@ main{
 }
 
 #rvw-2{
-    left: 35%;
-    top: 400%;
+    left: 30%;
+    top: -22%;
 }
 
 #rvw-3{
-    left: 64%;
-    top: 400%;
+    left: 68%;
+    top: -22%;
 }
 /*----------------------------------contact-----------------------------*/
 
@@ -381,4 +457,223 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/*--------------------------mid-size-----------------------*/
+
+@media(max-width: 1220px){
+
+    .full-hdr{
+        display: none;
+    }
+
+    .policy-wrapper{
+        margin-top: 200px;
+    }
+
+    .header-buttons{
+        gap: 1px;
+    }
+
+    .tablet-header{
+        display: flex;
+    }
+
+    main{
+        margin-top: 200px;
+    }
+
+    .hero, .work-title, .rvw-title, .contact-title, .reminders{
+        height: 10rem;
+        font-size: 2.5rem;
+    }
+
+    #abt-flwr-btm{
+        top: 85%;
+        left: -20%;
+    }
+
+    #rvw-1, #rvw-2, #rvw-3{
+        height: 250px;
+    }
+
+    #rvw-1{
+        left: -10%;
+    }
+
+    #rvw-2{
+        left: 30%;
+    }
+
+    #rvw-3{
+        left: 68.5%;
+    }
+
+    .c1, .c3{
+        font-size: 1rem;
+        width: 10rem;
+    }
+
+    .c3{
+        margin-top: 1rem;
+    }
+
+    .c2{
+        width: 10rem;
+        font-size: .85rem;
+    }
+
+    .reviews{
+        gap: 8rem;
+    }
+}
+
+/*-------------------small-size----------------------*/
+
+@media (max-width: 1030px){
+    .tablet-header{
+        display: none;
+    }
+
+    .mobile-header{
+        display: flex;
+    }
+
+    .policy-wrapper{
+        margin-top: 94px;
+    }
+
+    main{
+        margin-top: 94px;
+    }
+
+    .hero, .work-title, .rvw-title, .contact-title, .reminders{
+        height: 7rem;
+        font-size: 1.5rem;
+        text-align: center;
+        font-family: 'DM Serif Text', Arial, Helvetica, sans-serif;
+    }
+
+    .about{
+        font-size: 1.2rem;
+        width: 77vw;
+    }
+
+    #abt-flwr-top{
+        height: 120px;
+        top: -8%;
+        right: -8%;
+    }
+
+    #abt-flwr-btm{
+        height: 120px;
+        top: 83%;
+        left: -12%;
+    }
+
+    .my-work{
+        gap: 15px;
+    }
+
+    .item img{
+        height: 200px;
+    }
+
+    .item:nth-child(odd) img{
+        transform: rotate(-2deg);
+    }
+    
+    .item:nth-child(even) img{
+        transform: rotate(2deg);
+    }
+
+    .see-more{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .reviews{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        margin-top: 1rem;
+    }
+
+    #rvw-1, #rvw-3{
+        height: 220px;
+        z-index: -1;
+    }
+
+    #rvw-1{
+        left: -23%;
+        top: 0%;
+    }
+
+    #rvw-2{
+        left: -32%;
+        top: 35%;
+        z-index: -1;
+    }
+
+    #rvw-3{
+        left: -26%;
+        top: 73%;
+    }
+
+    .c1, .c3{
+        font-size: 1.2rem;
+        width: 7rem;
+    }
+
+    .c2{
+        width: 10rem;
+        font-size: .9rem;
+    }
+
+    .contact-title{
+        margin-top: 4rem;
+    }
+
+    .contact-content{
+        padding: 1rem;
+    }
+
+    .contact-buttons{
+        font-size: 1rem;
+    }
+
+    .contact-buttons img{
+        height: 45px;
+    }
+
+    .contact-para{
+        width: 65vw;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    footer{
+        height: 4rem;
+    }
+
+    .footer-rights{
+        font-size: .8rem;
+    }
+
+    .references{
+        font-size: .4rem;
+    }
+
+    .reminder-content{
+        font-size: 1rem;
+    }
+
+    .reminder-content img{
+        height: 150px;
+        padding: 0;
+        margin: 0;
+    }
+
 }

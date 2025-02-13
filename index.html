@@ -33,6 +33,33 @@
                 <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="policies.html">Policies</a></button>
             </div>
         </div>
+        <div class="tablet-header">
+            <img src="img/cruzdefloreslogo.png" height="125px" alt="">
+            <div class="tablet-buttons-wrapper">
+                <div class="top-tablet-buttons">
+                    <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="#about">About</a></button>
+                    <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="#my-work">Gallery</a></button>
+                    <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="#rvw">Reviews</a></button>
+                </div>
+                <div class="bottom-tablet-buttons">
+                    <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="#contact">Order</a></button>
+                    <button class="h-btn small-b"><img src="img/top-view-pink-flower-with-drops.png" class="flower-spin" height="55px"><a class="small-a" href="policies.html">Policies</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-header">
+            <div class="top-mobile">
+                <img src="img/flat-logo.png" class="flat-logo" height="120px">
+                <a href="javascript:void(0)" onclick="menuFunction()"><img src="img/icons8-hamburger-menu.svg" height="35px" alt=""></a>
+            </div>
+        </div>
+        <div id="links">
+            <button> <a href="#about" class="m-a">About</a></button>
+            <button> <a href="#my-work" class="m-a">Gallery</a></button>
+            <button> <a href="#rvw" class="m-a">Reviews</a></button>
+            <button> <a href="#contact" class="m-a">Order</a></button>
+            <button> <a href="policies.html" class="m-a">Policies</a></button>
+        </div>
     </header>
     <main>
         <div class="hero">
@@ -47,18 +74,20 @@
             through the art of flowers!
         </div>
         <span class="work-title" id="my-work">My Work</span>
-        <img id="work-1" src="img/vecteezy_wreath-floral-branch-in-hand-drawn-style_12028148.png" height="300px" alt="">
-        <img id="work-2" src="img/vecteezy_wreath-floral-branch-in-hand-drawn-style_12028231.png" height="300px" alt="">
-        <img id="work-3" src="img/vecteezy_flower-pattern-png-file_19887458.png" height="210px" alt="">
-        <div class="my-work">
-            <div class="item"><img src="img/IMG_0039.jpg" alt=""></div>
-            <div class="item"><img src="img/IMG_3533.jpg" alt=""></div>
-            <div class="item"><img src="img/IMG_7018.jpg" alt=""></div>
-            <div class="item"><img src="img/IMG_7252.jpg" alt=""></div>
-            <div class="item"><img src="img/IMG_8562.jpg" alt=""></div>
-            <div class="item"><img src="img/IMG_9001.jpg" alt=""></div>
+        <div class="work-wrapper">
+            <img id="work-1" src="img/vecteezy_wreath-floral-branch-in-hand-drawn-style_12028148.png" height="300px" alt="">
+            <img id="work-2" src="img/vecteezy_wreath-floral-branch-in-hand-drawn-style_12028231.png" height="300px" alt="">
+            <img id="work-3" src="img/vecteezy_flower-pattern-png-file_19887458.png" height="210px" alt="">
+            <div class="my-work">
+                <div class="item"><img src="img/IMG_0039.jpg" alt=""></div>
+                <div class="item"><img src="img/IMG_3533.jpg" alt=""></div>
+                <div class="item"><img src="img/IMG_7018.jpg" alt=""></div>
+                <div class="item"><img src="img/IMG_7252.jpg" alt=""></div>
+                <div class="item"><img src="img/IMG_8562.jpg" alt=""></div>
+                <div class="item"><img src="img/IMG_9001.jpg" alt=""></div>
+            </div>
         </div>
-        <span style="font-size: 2rem;">See more on my social media!</span>
+        <span class="see-more" style="font-size: 2rem;">See more on my social media!</span>
         <span class="rvw-title" id="rvw">Perfect Arrangements, Every Time</span>
         <div class="reviews" id="reviews">
             <img id="rvw-1" src="img/vecteezy_simple-square-floral-frame-border-with-a-corner-of-hand_23546045.png" height="400px" alt="">
@@ -95,7 +124,7 @@
         </div>
     </main>
     <footer>
-        <span>Cruz de Floress | Copyright © 2025. All Rights Reserved</span> <br>
+        <span class="footer-rights">Cruz de Floress | Copyright © 2025. All Rights Reserved</span> <br>
         <div class="references">
             <a href="https://www.vecteezy.com/free-png/hand-drawn-flowers">Hand Drawn Flowers PNGs by Vecteezy</a>,
             <a target="_blank" href="https://icons8.com/icon/13912/facebook">Facebook</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>,
@@ -105,18 +134,36 @@
 
     <script>
         window.onscroll = function() {scrollFunction()};
+        window.onresize = function() {scrollFunction()};
+        window.onload = function() {scrollFunction()};
 
         function scrollFunction() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
-                document.getElementById('full').style.height = '0'
-                document.getElementById('full-btns').style.display = 'none'
-                document.getElementById('collapse').style.display = 'flex'
+            if (window.innerWidth > 1220){
+                if ((document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)){
+                    document.getElementById('full').style.display = 'none'
+                    document.getElementById('full-btns').style.display = 'none'
+                    document.getElementById('collapse').style.display = 'flex'
+                } else {
+                    document.getElementById('full').style.display = 'flex'
+                    document.getElementById('full-btns').style.display = 'flex'
+                    document.getElementById('collapse').style.display = 'none'
+            }
             } else {
-                document.getElementById('full').style.height = '360px'
-                document.getElementById('full-btns').style.display = 'flex'
+                document.getElementById('full').style.display = 'none'
+                document.getElementById('full-btns').style.display = 'none'
                 document.getElementById('collapse').style.display = 'none'
             }
         }
+
+        function menuFunction() {
+            var x = document.getElementById("links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+}
+
     </script>
 </body>
 </html>
